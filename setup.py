@@ -174,7 +174,6 @@ else:
         "cxx": ["-g", "-O3", "-fopenmp", "-lgomp", "-std=c++17", "-DENABLE_BF16"],
         "nvcc": nvcc_flags + arch_flags + generator_flags
     }
-    print(extra_compile_args)
 
 extensions = [
     CUDAExtension(

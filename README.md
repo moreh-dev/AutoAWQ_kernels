@@ -17,9 +17,17 @@ pip install autoawq-kernels
 ```
 
 ### Build from source
+In [torch/utils/cpp_extension.py](https://github.com/pytorch/pytorch/blob/ad507789d12e3f757a43f35cd66e7aea6124140d/torch/utils/cpp_extension.py#L209), set the following:
+```python
+IS_HIP_EXTENSION = True
+ROCM_VERSION = (5,3)
+```
 
 ```
 git clone https://github.com/casper-hansen/AutoAWQ_kernels
 cd AutoAWQ_kernels
+ROCM_VERSION=5.3.3 \
+ROCM_HOME=/opt/rocm \
+PYTORCH_ROCM_ARCH=gfx90a \
 pip install -e .
 ```

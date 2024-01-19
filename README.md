@@ -26,6 +26,7 @@ ROCM_VERSION = (5,3)
 ```
 git clone https://github.com/casper-hansen/AutoAWQ_kernels
 cd AutoAWQ_kernels
+git checkout rocm5.3
 ROCM_VERSION=5.3.3 \
 ROCM_HOME=/opt/rocm \
 PYTORCH_ROCM_ARCH=gfx90a \
